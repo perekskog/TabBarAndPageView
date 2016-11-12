@@ -23,8 +23,8 @@ class PageViewDefaultVC: UIViewController,
         print("PageViewDefaultVC viewDidLoad")
         
         pageController = UIPageViewController(
-            transitionStyle: .Scroll,
-            navigationOrientation: .Horizontal,
+            transitionStyle: .scroll,
+            navigationOrientation: .horizontal,
             options: nil)
         
         pageController?.dataSource = self
@@ -32,21 +32,21 @@ class PageViewDefaultVC: UIViewController,
         let startingViewController1: PageViewContentFirstVC = pageViewControllerAtIndex(0)!
         
         pageController!.setViewControllers([startingViewController1],
-            direction: .Forward,
+            direction: .forward,
             animated: false,
             completion: nil)
         
         self.addChildViewController(pageController!)
         self.view.addSubview(self.pageController!.view)
-        pageController!.didMoveToParentViewController(self)
+        pageController!.didMove(toParentViewController: self)
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print("PageViewDefaultVC viewWillAppear")
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         print("PageViewDefaultVC viewDidAppear")
     }
@@ -64,12 +64,12 @@ class PageViewDefaultVC: UIViewController,
         print("PageViewDefaultVC viewDidLayoutSubviews")
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         print("PageViewDefaultVC viewWillDisappear")
     }
     
-    override func viewDidDisappear(animated: Bool) {
+    override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         print("PageViewDefaultVC viewDidDisappear")
     }
@@ -86,14 +86,14 @@ class PageViewDefaultVC: UIViewController,
     // UIPageViewControllerDataSource
     /////////////////////////
     
-    func pageViewControllerAtIndex(index: Int) -> PageViewContentFirstVC? {
+    func pageViewControllerAtIndex(_ index: Int) -> PageViewContentFirstVC? {
         if index < 0 || index >= pageTitles.count {
             return nil
         }
         
         let storyBoard = UIStoryboard(name: "Main",
-            bundle: NSBundle.mainBundle())
-        let newVc = storyBoard.instantiateViewControllerWithIdentifier("PageViewContentFirst") as! PageViewContentFirstVC
+            bundle: Bundle.main)
+        let newVc = storyBoard.instantiateViewController(withIdentifier: "PageViewContentFirst") as! PageViewContentFirstVC
         
         newVc.pageIndex = index
         newVc.titleText = pageTitles[index]
@@ -103,7 +103,7 @@ class PageViewDefaultVC: UIViewController,
 
     }
     
-    func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         if let vc = viewController as? PageViewContentFirstVC {
             if let index = vc.pageIndex {
                 return pageViewControllerAtIndex(index-1)
@@ -112,7 +112,7 @@ class PageViewDefaultVC: UIViewController,
         return nil
     }
 
-    func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         if let vc = viewController as? PageViewContentFirstVC {
             if let index = vc.pageIndex {
                 return pageViewControllerAtIndex(index+1)

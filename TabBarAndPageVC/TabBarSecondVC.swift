@@ -15,12 +15,12 @@ class TabBarSecondVC: UIViewController {
         print("TabBarSecondVC viewDidLoad")
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print("TabBarSecondVC viewWillAppear")
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         print("TabBarSecondVC viewDidAppear")
     }
@@ -35,12 +35,12 @@ class TabBarSecondVC: UIViewController {
         print("TabBarSecondVC viewDidLayoutSubviews")
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         print("TabBarSecondVC viewWillDisappear")
     }
     
-    override func viewDidDisappear(animated: Bool) {
+    override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         print("TabBarSecondVC viewDidDisappear")
     }

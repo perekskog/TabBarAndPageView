@@ -31,12 +31,12 @@ class PageViewContentFirstVC: UIViewController {
         }
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print("PageViewContentFirstVC viewWillAppear [\(pageIndex)]")
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         print("PageViewContentFirstVC viewDidAppear [\(pageIndex)]")
     }
@@ -51,12 +51,12 @@ class PageViewContentFirstVC: UIViewController {
         print("PageViewContentFirstVC viewDidLayoutSubviews [\(pageIndex)]")
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         print("PageViewContentFirstVC viewWillDisappear [\(pageIndex)]")
     }
     
-    override func viewDidDisappear(animated: Bool) {
+    override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         print("PageViewContentFirstVC viewDidDisappear [\(pageIndex)]")
     }
