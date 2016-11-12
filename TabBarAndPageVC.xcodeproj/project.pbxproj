@@ -164,11 +164,9 @@
 				TargetAttributes = {
 					CBAC66691B9A320600235A95 = {
 						CreatedOnToolsVersion = 6.4;
-						LastSwiftMigration = 0810;
 					};
 					CBAC66811B9A320600235A95 = {
 						CreatedOnToolsVersion = 6.4;
-						LastSwiftMigration = 0810;
 						TestTargetID = CBAC66691B9A320600235A95;
 					};
 				};
@@ -349,7 +347,6 @@
 				INFOPLIST_FILE = TabBarAndPageVC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -360,7 +357,6 @@
 				INFOPLIST_FILE = TabBarAndPageVC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -379,7 +375,6 @@
 				INFOPLIST_FILE = TabBarAndPageVCTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TabBarAndPageVC.app/TabBarAndPageVC";
 			};
 			name = Debug;
@@ -395,7 +390,6 @@
 				INFOPLIST_FILE = TabBarAndPageVCTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TabBarAndPageVC.app/TabBarAndPageVC";
 			};
 			name = Release;
@@ -419,7 +413,6 @@
 				CBAC668E1B9A320600235A95 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 		CBAC668F1B9A320600235A95 /* Build configuration list for PBXNativeTarget "TabBarAndPageVCTests" */ = {
 			isa = XCConfigurationList;
@@ -428,7 +421,6 @@
 				CBAC66911B9A320600235A95 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
